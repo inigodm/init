@@ -17,10 +17,14 @@ echo -ne "\033[2K[2K\rRemoving.... Done!\n"
 echo -n "Installing lsd....\n"
 sudo apt-get -qq -y install lsd
 echo -ne "\033[2K[2K\rInstalling lsd.... Done!\n"
+echo -n "Installing bat....\n"
+sudo apt-get -qq -y install bat
+echo -ne "\033[2K[2K\rInstalling bat.... Done!\n"
+
 
 # PER USER
 # Powerlevel10K
-sudo usermod --shell /usr/bin/zsh
+#sudo usermod --shell /usr/bin/zsh
 echo "Installing powerlevel10 for current user"
 echo -n "Cloning repo from github.....\n"
 git clone --quiet --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
@@ -36,11 +40,11 @@ echo "Resuming"
 
 
 # Root
-sudo usermod --shell /usr/bin/zsh
+'''sudo usermod --shell /usr/bin/zsh
 echo "Installing powerlevel10 for current ROOT"
 echo -n "Cloning repo from github.....\n"
 git clone --quiet --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo -ne "\033[2K[2K\rCloning repo from github.....Done!\n"
 echo -n "Adding sources to .zshrc.....\n"
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
-echo -ne "\033[2K[2K\rAdding sources to .zshrc.....Done!\n"
+echo -ne "\033[2K[2K\rAdding sources to .zshrc.....Done!\n"'''
