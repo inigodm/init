@@ -17,9 +17,12 @@ echo -ne "\033[2K[2K\rRemoving.... Done!\n"
 echo -n "Installing lsd....\n"
 sudo apt-get -qq -y install lsd
 echo -ne "\033[2K[2K\rInstalling lsd.... Done!\n"
+echo 'alias ls="lsd --group-dirs=last"' >> ~/.zshrc
 echo -n "Installing bat....\n"
 sudo apt-get -qq -y install bat
 echo -ne "\033[2K[2K\rInstalling bat.... Done!\n"
+echo 'alias cat="/usr/bin/bat --paging=never"' >> ~/.zshrc
+echo 'alias catn="/usr/bin/cat"' >> ~/.zshrc
 
 
 # PER USER
