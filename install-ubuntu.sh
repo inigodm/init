@@ -27,11 +27,17 @@ rm ~/bat.deb
 echo -ne "\033[2K[2K\rInstalling bat.... Done!\n"
 echo 'alias cat="/usr/bin/bat --paging=never"' >> ~/.zshrc
 echo 'alias catn="/usr/bin/cat"' >> ~/.zshrc
-
+echo 'Add autocomplete to directories (may broke autosuggestions?)'
+echo 'setopt auto_cd' >> ~/.zshrc
+echo 'autoload -zU compinit' >> ~/.zshrc
+echo 'compinit' >> ~/.zshrc
 
 # PER USER
 # Powerlevel10K
 #sudo usermod --shell /usr/bin/zsh
+echo "Installing fzf for current user"
+git clone --quiet --depth=1 https://github.com/junegunn/fzf.git ~/.fzf
+./fzf/install
 echo "Installing powerlevel10 for current user"
 echo -n "Cloning repo from github.....\n"
 git clone --quiet --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
