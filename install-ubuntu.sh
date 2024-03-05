@@ -3,6 +3,10 @@
 URL_NERD_FONTS=https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Hack.zip
 PATH_TO_FONTS=/usr/local/share/fonts
 
+# mac
+# port install bat
+# brew install fzf
+
 # COMMON
 # Install fonts to be able to draw every unicode character
 echo -n "Downloading fonts from internet....\n"
@@ -19,7 +23,7 @@ sudo apt-get -qq -y install lsd
 echo -ne "\033[2K[2K\rInstalling lsd.... Done!\n"
 echo 'alias ls="lsd --group-dirs=last"' >> ~/.zshrc
 # setting dir colors to violet to omit the default dark blue
-echo 'export LS_COLORS="$LS_COLORS:di=01;36:"' >> ~.zshrc
+echo 'export LS_COLORS="$LS_COLORS:di=01;36:"' >> ~/.zshrc
 echo -n "Installing bat....\n"
 wget -q -P ~/bat.deb https://github.com/sharkdp/bat/releases/download/v0.24.0/bat-musl_0.24.0_amd64.deb
 sudo dpkg -i ~/bat.deb/bat-musl_0.24.0_amd64.deb
