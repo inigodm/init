@@ -7,6 +7,17 @@ PATH_TO_FONTS=/usr/local/share/fonts
 # port install bat
 # brew install fzf
 
+echo "Installing some utilities: "
+sudo apt -qq - y install terminator zsh vim vlc
+echo "Fixing history for zsh"
+touch ~/.zsh_history
+chmod 600 ~/.zsh_history
+echo "setopt APPEND_HISTORY" > ~/.zshrc
+echo "setopt INC_APPEND_HISTORY" > ~/.zshrc
+echo "setopt SHARE_HISTORY" > ~/.zshrc
+echo "setopt HIST_IGNORE_DUPS" > ~/.zshrc
+echo "setopt HIST_IGNORE_SPACE" > ~/.zshrc
+echo "setopt HIST_SAVE_NO_DUPS" > ~/.zshrc
 # COMMON
 # Install fonts to be able to draw every unicode character
 echo -n "Downloading fonts from internet....\n"
