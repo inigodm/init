@@ -63,6 +63,9 @@ echo 'setopt append_history' >> ~/.zshrc
 echo 'setopt hist_ignore_dups' >> ~/.zshrc
 echo 'setopt share_history' >> ~/.zshrc
 
+echo 'Changing current user`s shell to zsh'
+sudo chsh -s /usr/bin/zsh $USER
+
 echo "IMPORTANT: After finalization you have not configured p10k, you should do it after installation ends running the command:"
 echo "p10k configure"
 read -n 1 -s -r -p ""
