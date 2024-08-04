@@ -59,6 +59,10 @@ sudo chown inigo:inigo -R /usr/share/zsh-syntax-highlighting
 echo 'source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >> ~/.zshrc
 echo -ne "\033[2K[2K\rInstalling zsh plugins.... Done!\n"
 
+echo 'setopt append_history' >> ~/.zshrc
+echo 'setopt hist_ignore_dups' >> ~/.zshrc
+echo 'setopt share_history' >> ~/.zshrc
+
 echo "IMPORTANT: After finalization you have not configured p10k, you should do it after installation ends running the command:"
 echo "p10k configure"
 read -n 1 -s -r -p ""
